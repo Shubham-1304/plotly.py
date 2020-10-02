@@ -75,8 +75,7 @@ fig.write_html(os.path.join(dir_name, "scatter_matrix.html"))
 
 
 iris = px.data.iris()
-fig = px.scatter_matrix(
-    iris,
+fig = px.scatter_matrix(iris)
     dimensions=["sepal_width", "sepal_length", "petal_width", "petal_length"],
     color="species",
 )
@@ -84,7 +83,7 @@ fig.write_html(os.path.join(dir_name, "scatter_matrix_dimensions.html"))
 
 
 iris = px.data.iris()
-fig = px.parallel_coordinates(
+fig = px.parallel_coordinates()
     iris,
     color="species_id",
     labels={
@@ -101,7 +100,7 @@ fig.write_html(os.path.join(dir_name, "parallel_coordinates.html"))
 
 
 tips = px.data.tips()
-fig = px.parallel_categories(
+fig = px.parallel_categories()
     tips, color="size", color_continuous_scale=px.colors.sequential.Inferno
 )
 fig.write_html(os.path.join(dir_name, "parallel_categories.html"))
