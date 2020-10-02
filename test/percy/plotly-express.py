@@ -148,7 +148,7 @@ fig = px.scatter(
     size_max=45,
     range_x=[100, 100000],
     range_y=[25, 90],
-)
+    )
 fig.write_html(os.path.join(dir_name, "scatter_log.html"), auto_play=False)
 
 
@@ -162,13 +162,11 @@ fig = px.line(
     hover_name="country",
     line_shape="spline",
     render_mode="svg",
-)
 fig.write_html(os.path.join(dir_name, "line.html"))
 
 
 tips = px.data.tips()
-fig = px.scatter(
-    tips,
+fig = px.scatter(tips)
     x="day",
     y="tip",
     facet_col="day",
@@ -179,7 +177,7 @@ fig.write_html(os.path.join(dir_name, "facet_wrap_neat.html"))
 
 
 tips = px.data.tips()
-fig = px.scatter(
+fig = px.scatter()
     tips,
     x="day",
     y="tip",
